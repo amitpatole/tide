@@ -1,0 +1,66 @@
+name: Create Release
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Get version from binaries
+      id: version
+      run: |
+        VERSION=$(ls packages/distribution/tide-linux-x64-*.bin | head -1 | sed 's/.*tide-linux-x64-\(.*\)\.bin/\1/')
+        echo "version=$VERSION" >> $GITHUB_OUTPUT
+        echo "Found version: $VERSION"
+        
+    - name: Check if release exists
+      id: check_release
+      run: |
+        if gh release view "v${{ steps.version.outputs.version }}" >/dev/null 2>&1; then
+          echo "exists=true" >> $GITHUB_OUTPUT
+        else
+          echo "exists=false" >> $GITHUB_OUTPUT
+        fi
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: Create Release
+      if: steps.check_release.outputs.exists == 'false'
+      run: |
+        gh release create "v${{ steps.version.outputs.version }}" \
+          --title "TIDE v${{ steps.version.outputs.version }}" \
+          --notes "## TIDE Terminal IDE v${{ steps.version.outputs.version }}
+
+        ### Quick Installation
+        **Linux/macOS:**
+        \`\`\`bash
+        curl -fsSL https://raw.githubusercontent.com/amitpatole/tide/main/packages/distribution/install.sh | bash
+        \`\`\`
+
+        **Windows:**
+        \`\`\`powershell
+        iwr -useb https://raw.githubusercontent.com/amitpatole/tide/main/packages/distribution/install.ps1 | iex
+        \`\`\`
+
+        ### Manual Download
+        - [Linux x64](https://github.com/amitpatole/tide/raw/main/packages/distribution/tide-linux-x64-${{ steps.version.outputs.version }}.bin)
+        - [macOS x64](https://github.com/amitpatole/tide/raw/main/packages/distribution/tide-macos-x64-${{ steps.version.outputs.version }}.bin)
+        - [Windows x64](https://github.com/amitpatole/tide/raw/main/packages/distribution/tide-windows-x64-${{ steps.version.outputs.version }}.bin.exe)
+
+        ### Documentation
+        - [Source Code](https://github.com/Enginuity-Solutions/terminal_ide)
+        - [Full Changelog](https://github.com/Enginuity-Solutions/terminal_ide/blob/main/CHANGELOG.md)
+        " \
+          packages/distribution/tide-linux-x64-${{ steps.version.outputs.version }}.bin \
+          packages/distribution/tide-macos-x64-${{ steps.version.outputs.version }}.bin \
+          packages/distribution/tide-windows-x64-${{ steps.version.outputs.version }}.bin.exe \
+          packages/distribution/install.sh \
+          packages/distribution/install.ps1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

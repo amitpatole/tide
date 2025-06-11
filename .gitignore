@@ -1,0 +1,20 @@
+# Temporary files
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+*.log
+*.pid
+
+# IDE files
+.vscode/
+.idea/
+
+# OS specific
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
