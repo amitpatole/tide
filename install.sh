@@ -86,7 +86,7 @@ install_binary() {
     
     # Try to download from GitHub releases first, then fall back to raw binary repo
     local download_url="https://github.com/$REPO_OWNER/$REPO_NAME/releases/download/$VERSION/$binary_name"
-    local fallback_url="https://raw.githubusercontent.com/$REPO_OWNER/$REPO_NAME/main/packages/distribution/$binary_name"
+    local fallback_url="https://raw.githubusercontent.com/$REPO_OWNER/$REPO_NAME/main/$binary_name"
     local binary_path="$BIN_DIR/tide"
     
     echo -e "${YELLOW}📥 Downloading TIDE binary...${NC}"

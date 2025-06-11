@@ -79,12 +79,12 @@ function Get-LatestVersion {
         }
         catch {
             Write-Yellow "⚠️  Cannot fetch latest version. Using default version."
-            $Version = "1.0.2"
+            $Version = "1.0.4"
         }
     }
     
     if (-not $Version) {
-        $Version = "1.0.2"
+        $Version = "1.0.4"
     }
     
     Write-Blue "📦 Installing TIDE version: $Version"
@@ -97,7 +97,7 @@ function Install-Binary {
     
     $BinaryName = "tide-$($Platform.OS)-$($Platform.Arch)-$Version.bin.exe"
     $DownloadUrl = "https://github.com/$RepoOwner/$RepoName/releases/download/$Version/$BinaryName"
-    $FallbackUrl = "https://raw.githubusercontent.com/$RepoOwner/$RepoName/main/packages/distribution/$BinaryName"
+    $FallbackUrl = "https://raw.githubusercontent.com/$RepoOwner/$RepoName/main/$BinaryName"
     $BinaryPath = "$BinDir\tide.exe"
     
     Write-Yellow "📥 Downloading TIDE binary..."
