@@ -79,12 +79,12 @@ function Get-LatestVersion {
         }
         catch {
             Write-Yellow "⚠️  Cannot fetch latest version. Using default version."
-            $Version = "1.0.8"
+            $Version = "1.0.9"
         }
     }
     
     if (-not $Version) {
-        $Version = "1.0.8"
+        $Version = "1.0.9"
     }
     
     Write-Blue "📦 Installing TIDE version: $Version"
