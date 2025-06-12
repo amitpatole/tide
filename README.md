@@ -2,7 +2,7 @@
 
 > Pre-compiled binaries for TIDE (Terminal IDE with Copilot) - A production-grade terminal-based IDE with GitHub Copilot integration.
 
-[![Version](https://img.shields.io/badge/version-1.0.2-blue.svg)](https://github.com/amitpatole/tide/releases)
+[![Version](https://img.shields.io/badge/version-1.1.1-blue.svg)](https://github.com/amitpatole/tide/releases)
 [![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20macOS%20%7C%20Windows-lightgrey.svg)](#available-binaries)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/Enginuity-Solutions/terminal_ide/blob/main/LICENSE)
 
@@ -12,38 +12,48 @@
 
 **Linux/macOS:**
 ```bash
-curl -fsSL https://raw.githubusercontent.com/amitpatole/tide/main/packages/distribution/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/amitpatole/tide/main/install.sh | bash
 ```
 
 **Windows (PowerShell):**
 ```powershell
-iwr -useb https://raw.githubusercontent.com/amitpatole/tide/main/packages/distribution/install.ps1 | iex
+iwr -useb https://raw.githubusercontent.com/amitpatole/tide/main/install.ps1 | iex
 ```
 
 ### Manual Installation
 
-1. **Download the binary for your platform** from the [packages/distribution](./packages/distribution/) directory
+1. **Download the binary for your platform** from the table below
 2. **Make it executable** (Linux/macOS): `chmod +x tide-*`
 3. **Move to PATH**: `sudo mv tide-* /usr/local/bin/tide`
 4. **Run**: `tide`
 
 ## 📦 Available Binaries
 
-### Current Version: v1.0.2
+### Current Version: v1.1.1
 
-| Platform | Architecture | Binary | Size |
-|----------|-------------|--------|------|
-| Linux | x64 | [`tide-linux-x64-1.0.2.bin`](./packages/distribution/tide-linux-x64-1.0.2.bin) | ~50MB |
-| macOS | x64 | [`tide-macos-x64-1.0.2.bin`](./packages/distribution/tide-macos-x64-1.0.2.bin) | ~50MB |
-| Windows | x64 | [`tide-windows-x64-1.0.2.bin.exe`](./packages/distribution/tide-windows-x64-1.0.2.bin.exe) | ~50MB |
+| Platform | Architecture | Binary | Size | Interface |
+|----------|-------------|--------|------|-----------|
+| Linux | x64 | [`tide-linux-x64-1.1.1.bin`](./tide-linux-x64-1.1.1.bin) | ~52MB | Interactive File Browser |
+| macOS | x64 | [`tide-macos-x64-1.1.1.bin`](./tide-macos-x64-1.1.1.bin) | ~57MB | Interactive File Browser |
+| Windows | x64 | [`tide-windows-x64-1.1.1.bin.exe`](./tide-windows-x64-1.1.1.bin.exe) | ~44MB | Interactive File Browser |
 
-### Legacy Binaries (Latest)
+
+### VSCode-like Interface (Advanced)
+
+| Platform | Architecture | Binary | Size | Interface |
+|----------|-------------|--------|------|-----------|
+| Linux | x64 | [`tide-vscode-linux-x64-1.1.1.bin`](./tide-vscode-linux-x64-1.1.1.bin) | ~44MB | VSCode-like 4-Panel Layout |
+| macOS | x64 | [`tide-vscode-macos-x64-1.1.1.bin`](./tide-vscode-macos-x64-1.1.1.bin) | ~49MB | VSCode-like 4-Panel Layout |
+| Windows | x64 | [`tide-vscode-windows-x64-1.1.1.bin.exe`](./tide-vscode-windows-x64-1.1.1.bin.exe) | ~36MB | VSCode-like 4-Panel Layout |
+
+
+### Legacy Binaries (Symlinks to Latest)
 
 | Platform | Architecture | Binary |
 |----------|-------------|--------|
-| Linux | x64 | [`tide-linux-x64.bin`](./packages/distribution/tide-linux-x64.bin) |
-| macOS | x64 | [`tide-macos-x64.bin`](./packages/distribution/tide-macos-x64.bin) |
-| Windows | x64 | [`tide-windows-x64.bin.exe`](./packages/distribution/tide-windows-x64.bin.exe) |
+| Linux | x64 | [`tide-linux-x64.bin`](./tide-linux-x64.bin) |
+| macOS | x64 | [`tide-macos-x64.bin`](./tide-macos-x64.bin) |
+| Windows | x64 | [`tide-windows-x64.bin.exe`](./tide-windows-x64.bin.exe) |
 
 ## 🚀 Getting Started
 
@@ -62,8 +72,8 @@ tide -r user@hostname
 # Show help
 tide --help
 
-# Install GitHub Copilot
-tide --install-copilot
+# Setup GitHub Copilot
+tide --setup-copilot
 ```
 
 ### ✅ Verify Installation
@@ -72,7 +82,7 @@ After installation, verify that TIDE is working correctly:
 
 ```bash
 # Quick verification script
-curl -fsSL https://raw.githubusercontent.com/amitpatole/tide/main/packages/distribution/verify-tide.sh | bash
+curl -fsSL https://raw.githubusercontent.com/amitpatole/tide/main/verify-tide.sh | bash
 
 # Manual verification
 tide --version
@@ -83,6 +93,24 @@ If `tide` command is not found, restart your terminal or run:
 source ~/.bashrc  # Linux/macOS
 # OR restart PowerShell on Windows
 ```
+
+## 🆕 What's New in v1.1.1
+
+### Major Improvements
+- ✅ **Enhanced Color Scheme** - High-contrast colors for better visibility
+- ✅ **Visible Copilot Input Box** - Clear text input area for chat
+- ✅ **Interactive Setup Wizard** - Easy GitHub Copilot configuration
+- ✅ **VSCode-like Interface** - 4-panel layout with Explorer, Editor, Copilot, and Terminal
+- ✅ **Improved File Navigation** - Arrow key navigation with file tree expansion
+- ✅ **Better UX/UI** - Enhanced dialogs and user interaction
+- ✅ **Contextual AI Responses** - Copilot understands your current code context
+
+### Interface Options
+- **Interactive**: Traditional file browser with inquirer-based navigation
+- **VSCode-like**: Modern 4-panel IDE layout with enhanced features
+
+### Archived Alpha Releases
+All previous versions (1.0.2 - 1.1.0) have been archived as alpha releases. See [`archive/alpha-releases/`](./archive/alpha-releases/) for historical versions.
 
 ## ✨ Features
 
