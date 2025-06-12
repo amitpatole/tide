@@ -2,7 +2,7 @@
 
 > Pre-compiled binaries for TIDE (Terminal IDE with Copilot) - A production-grade terminal-based IDE with GitHub Copilot integration.
 
-[![Version](https://img.shields.io/badge/version-1.1.1-blue.svg)](https://github.com/amitpatole/tide/releases)
+[![Version](https://img.shields.io/badge/version-1.1.2-blue.svg)](https://github.com/amitpatole/tide/releases)
 [![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20macOS%20%7C%20Windows-lightgrey.svg)](#available-binaries)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/Enginuity-Solutions/terminal_ide/blob/main/LICENSE)
 
@@ -29,22 +29,22 @@ iwr -useb https://raw.githubusercontent.com/amitpatole/tide/main/install.ps1 | i
 
 ## 📦 Available Binaries
 
-### Current Version: v1.1.1
+### Current Version: v1.1.2
 
 | Platform | Architecture | Binary | Size | Interface |
 |----------|-------------|--------|------|-----------|
-| Linux | x64 | [`tide-linux-x64-1.1.1.bin`](./tide-linux-x64-1.1.1.bin) | ~52MB | Interactive File Browser |
-| macOS | x64 | [`tide-macos-x64-1.1.1.bin`](./tide-macos-x64-1.1.1.bin) | ~57MB | Interactive File Browser |
-| Windows | x64 | [`tide-windows-x64-1.1.1.bin.exe`](./tide-windows-x64-1.1.1.bin.exe) | ~44MB | Interactive File Browser |
+| Linux | x64 | [`tide-linux-x64-1.1.2.bin`](./tide-linux-x64-1.1.2.bin) | ~52MB | Interactive File Browser |
+| macOS | x64 | [`tide-macos-x64-1.1.2.bin`](./tide-macos-x64-1.1.2.bin) | ~57MB | Interactive File Browser |
+| Windows | x64 | [`tide-windows-x64-1.1.2.bin.exe`](./tide-windows-x64-1.1.2.bin.exe) | ~44MB | Interactive File Browser |
 
 
 ### VSCode-like Interface (Advanced)
 
 | Platform | Architecture | Binary | Size | Interface |
 |----------|-------------|--------|------|-----------|
-| Linux | x64 | [`tide-vscode-linux-x64-1.1.1.bin`](./tide-vscode-linux-x64-1.1.1.bin) | ~44MB | VSCode-like 4-Panel Layout |
-| macOS | x64 | [`tide-vscode-macos-x64-1.1.1.bin`](./tide-vscode-macos-x64-1.1.1.bin) | ~49MB | VSCode-like 4-Panel Layout |
-| Windows | x64 | [`tide-vscode-windows-x64-1.1.1.bin.exe`](./tide-vscode-windows-x64-1.1.1.bin.exe) | ~36MB | VSCode-like 4-Panel Layout |
+| Linux | x64 | [`tide-vscode-linux-x64-1.1.2.bin`](./tide-vscode-linux-x64-1.1.2.bin) | ~44MB | VSCode-like 4-Panel Layout |
+| macOS | x64 | [`tide-vscode-macos-x64-1.1.2.bin`](./tide-vscode-macos-x64-1.1.2.bin) | ~49MB | VSCode-like 4-Panel Layout |
+| Windows | x64 | [`tide-vscode-windows-x64-1.1.2.bin.exe`](./tide-vscode-windows-x64-1.1.2.bin.exe) | ~36MB | VSCode-like 4-Panel Layout |
 
 
 ### Legacy Binaries (Symlinks to Latest)
@@ -94,9 +94,12 @@ source ~/.bashrc  # Linux/macOS
 # OR restart PowerShell on Windows
 ```
 
-## 🆕 What's New in v1.1.1
+## 🆕 What's New in v1.1.2
 
 ### Major Improvements
+- ✅ **Fixed Version Display** - Now correctly shows v1.1.2 in all binaries
+- ✅ **Enhanced Setup Command** - Added proper `--setup-copilot` support
+- ✅ **Improved Binary Consistency** - All binaries built from same enhanced codebase
 - ✅ **Enhanced Color Scheme** - High-contrast colors for better visibility
 - ✅ **Visible Copilot Input Box** - Clear text input area for chat
 - ✅ **Interactive Setup Wizard** - Easy GitHub Copilot configuration
@@ -110,7 +113,7 @@ source ~/.bashrc  # Linux/macOS
 - **VSCode-like**: Modern 4-panel IDE layout with enhanced features
 
 ### Archived Alpha Releases
-All previous versions (1.0.2 - 1.1.0) have been archived as alpha releases. See [`archive/alpha-releases/`](./archive/alpha-releases/) for historical versions.
+All previous versions (1.0.2 - 1.1.1) have been archived as alpha releases. Only the latest stable v1.1.2 is available for download.
 
 ## ✨ Features
 

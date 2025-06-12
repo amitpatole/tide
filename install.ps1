@@ -2,7 +2,7 @@
 # PowerShell script for installing TIDE on Windows systems
 
 param(
-    [string]$Version = "1.1.1",
+    [string]$Version = "1.1.2",
     [switch]$Help
 )
 
@@ -51,7 +51,7 @@ function Show-Banner {
    ██║   ██║██████╔╝███████╗
    ╚═╝   ╚═╝╚═════╝ ╚══════╝
 
-Terminal IDE with Copilot v1.1.1
+Terminal IDE with Copilot v1.1.2
 "@
 }
 
