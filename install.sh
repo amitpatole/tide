@@ -15,7 +15,7 @@ REPO_OWNER="amitpatole"
 REPO_NAME="tide"
 INSTALL_DIR="$HOME/.tide"
 BIN_DIR="$INSTALL_DIR/bin"
-VERSION="1.1.0"
+VERSION="1.1.1"
 
 # ASCII Art Banner
 print_banner() {
