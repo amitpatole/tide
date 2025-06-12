@@ -1,5 +1,13 @@
 # TIDE (Terminal IDE with Copilot) Installer for Windows
-# PowerShell script for installing TIDE on Windows systems
+# PowerShell script fo        } catch {
+            Write-Yellow "⚠️  Cannot fetch latest version. Using default version."
+            $Version = "1.1.0"
+        }
+    }
+    
+    if (-not $Version) {
+        $Version = "1.1.0"
+    }ing TIDE on Windows systems
 
 param(
     [string]$Version = "latest",

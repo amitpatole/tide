@@ -15,7 +15,7 @@ REPO_OWNER="amitpatole"
 REPO_NAME="tide"
 INSTALL_DIR="$HOME/.tide"
 BIN_DIR="$INSTALL_DIR/bin"
-VERSION="1.0.9"
+VERSION="1.1.0"
 
 # ASCII Art Banner
 print_banner() {
@@ -67,11 +67,11 @@ get_latest_version() {
         VERSION=$(wget -qO- "https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/releases/latest" | grep '"tag_name"' | cut -d'"' -f4)
     else
         echo -e "${YELLOW}⚠️  Cannot fetch latest version. Using default version.${NC}"
-        VERSION="1.0.9"
+        VERSION="1.1.0"
     fi
     
     if [ -z "$VERSION" ]; then
-        VERSION="1.0.9"
+        VERSION="1.1.0"
     fi
     
     echo -e "${BLUE}📦 Installing TIDE version: $VERSION${NC}"
@@ -248,14 +248,14 @@ show_instructions() {
     echo -e "${GREEN}🚀 Getting Started:${NC}"
     echo -e "   ${BLUE}1.${NC} Restart your terminal or run: ${YELLOW}source ~/.bashrc${NC} (to refresh PATH)"
     echo -e "   ${BLUE}2.${NC} Test installation: ${YELLOW}tide --version${NC}"
-    echo -e "   ${BLUE}3.${NC} Run first-time setup: ${YELLOW}tide --setup${NC}"
-    echo -e "   ${BLUE}4.${NC} Install Copilot (optional): ${YELLOW}tide --install-copilot${NC}"
+    echo -e "   ${BLUE}3.${NC} Setup GitHub Copilot: ${YELLOW}tide --setup-copilot${NC}"
+    echo -e "   ${BLUE}4.${NC} Open a project: ${YELLOW}tide /path/to/project${NC}"
     echo ""
     echo -e "${GREEN}💡 Quick Commands:${NC}"
     echo -e "   ${YELLOW}tide${NC}                      # Open current directory"
     echo -e "   ${YELLOW}tide .${NC}                    # Open current directory"
     echo -e "   ${YELLOW}tide /path/to/project${NC}     # Open specific project"
-    echo -e "   ${YELLOW}tide -r user@server${NC}       # Connect via SSH"
+    echo -e "   ${YELLOW}tide --setup-copilot${NC}      # Configure GitHub Copilot"
     echo -e "   ${YELLOW}tide --help${NC}               # Show all options"
     echo ""
     echo -e "${GREEN}📚 Documentation:${NC}"
