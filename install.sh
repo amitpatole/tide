@@ -67,11 +67,11 @@ get_latest_version() {
         VERSION=$(wget -qO- "https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/releases/latest" | grep '"tag_name"' | cut -d'"' -f4)
     else
         echo -e "${YELLOW}⚠️  Cannot fetch latest version. Using default version.${NC}"
-        VERSION="1.1.0"
+        VERSION="1.1.1"
     fi
     
     if [ -z "$VERSION" ]; then
-        VERSION="1.1.0"
+        VERSION="1.1.1"
     fi
     
     echo -e "${BLUE}📦 Installing TIDE version: $VERSION${NC}"
