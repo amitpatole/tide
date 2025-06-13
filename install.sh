@@ -15,7 +15,7 @@ REPO_OWNER="amitpatole"
 REPO_NAME="tide"
 INSTALL_DIR="$HOME/.tide"
 BIN_DIR="$INSTALL_DIR/bin"
-VERSION="1.1.2"  # Current stable version
+VERSION="1.1.3"  # Current stable version
 
 # ASCII Art Banner
 print_banner() {
@@ -28,7 +28,7 @@ print_banner() {
    ██║   ██║██████╔╝███████╗
    ╚═╝   ╚═╝╚═════╝ ╚══════╝
 
-Terminal IDE with Copilot v1.1.2
+Terminal IDE with Copilot v1.1.3
 EOF
     echo -e "${NC}"
 }

@@ -35,7 +35,7 @@ if ($Help) {
     Write-Output "Usage: .\install.ps1 [options]"
     Write-Output ""
     Write-Output "Options:"
-    Write-Output "  -Version VERSION    Install specific version (default: 1.1.1)"
+    Write-Output "  -Version VERSION    Install specific version (default: 1.1.3)"
     Write-Output "  -Help              Show this help"
     Write-Output ""
     exit 0
@@ -51,7 +51,7 @@ function Show-Banner {
    ██║   ██║██████╔╝███████╗
    ╚═╝   ╚═╝╚═════╝ ╚══════╝
 
-Terminal IDE with Copilot v1.1.2
+Terminal IDE with Copilot v1.1.3
 "@
 }
 
@@ -222,10 +222,10 @@ function Show-Instructions {
     Write-Output "   tide --setup-copilot      # Configure GitHub Copilot"
     Write-Output "   tide --help               # Show all options"
     Write-Output ""
-    Write-Green "🆕 What's New in v1.1.1:"
-    Write-Output "   • Enhanced color scheme for better visibility"
-    Write-Output "   • Visible Copilot input box with clear highlighting"
-    Write-Output "   • Interactive GitHub Copilot setup wizard"
+    Write-Green "🆕 What's New in v1.1.3:"
+    Write-Output "   • Enhanced mouse support for MobaXterm/PuTTY compatibility"
+    Write-Output "   • Improved stability with defensive error handling"
+    Write-Output "   • Fixed blessed library crashes during shutdown"
     Write-Output "   • VSCode-like 4-panel interface option"
     Write-Output "   • Improved file navigation and UX"
     Write-Output ""
